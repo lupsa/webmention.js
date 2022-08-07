@@ -304,7 +304,7 @@ A more detailed example:
    * @returns string
    */
   function formatComments(comments) {
-    const headline = `<h2>${t('Responses')}</h2>`;
+    const headline = `<h2>${t('Webmentions')}</h2>`;
     const markup = comments
       .map((c) => {
         const image = reactImage(c, true);
@@ -325,7 +325,7 @@ A more detailed example:
           linktext = extractComment(c);
         }
 
-        const type = `<span class="${linkclass}">${linktext}</span>`;
+        const type = `<p class="${linkclass}">${linktext}</p>`;
 
         return `<li>${image} ${link} ${type}</li>`;
       })
